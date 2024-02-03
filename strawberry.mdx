@@ -3,7 +3,13 @@ title: Basics of 🍓 Strawberry
 description: Learn the basics of 🍓 Strawberry, a GraphQL library for Python.
 ---
 
-![Strawberry](https://i.imgur.com/TEN5GLj.png)
+<center>
+	<img
+		src="https://i.imgur.com/TEN5GLj.png"
+		alt="Strawberry"
+		width="100"
+	/>
+</center>
 
 # Installation
 
@@ -460,3 +466,34 @@ user = await loader.load(1)
 [user_a, user_b, user_c] = await loader.load_many([1, 2, 3])
 
 ```
+
+## Permissions
+
+Permissions can be managed using `Permission` classes. A `Permission` class extends `BasePermission` and has a `has_permission` method. It can be added to a field using the `permission_classes` keyword argument. A basic example looks like this:
+
+```python
+from strawberry.permission import BasePermission
+from strawberry.types.info import Info
+class PermissionClass(BasePermission):
+	message = "..."
+	def has_permission(
+		self, source: Any, info: Info, **kwargs: Any
+	):
+		# Must return true
+		return True # or False
+
+# ..... app.py .....
+@strawberry.type
+class Query:
+	@strawberry.field(permission_classes=[PermissionClass])
+	def test(self):
+		...
+```
+
+### Accessing User Information [¶](https://strawberry.rocks/docs/guides/permissions#accessing-user-information)
+
+Accessing the current user information to implement your permission checks depends on the web framework you are using.
+
+Most frameworks will have a `Request` object where you can either access the current user directly or access headers/cookies/query parameters to authenticate the user.
+
+All the Strawberry integrations provide this Request object in the `info.context` object that is accessible in every resolver and in the `has_permission` function.

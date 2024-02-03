@@ -2,8 +2,8 @@
 	"$schema": "https://mintlify.com/schema.json",
 	"name": "Starter Kit",
 	"logo": {
-		"dark": "/logo/dark.svg",
-		"light": "/logo/light.svg"
+		"dark": "/logo/vantage.svg",
+		"light": "/logo/vantage.svg"
 	},
 	"favicon": "/favicon.svg",
 	"colors": {
@@ -15,10 +15,18 @@
 			"to": "#07C983"
 		}
 	},
+	"analytics": {
+		"ga4": {
+			"measurementId": "G-4RJZQVGX2V"
+		},
+		"gtm": {
+			"tagId": "G-4RJZQVGX2V"
+		}
+	},
 	"topbarLinks": [
 		{
 			"name": "Support",
-			"url": "mailto:hi@mintlify.com"
+			"url": "mailto:sorberconsulting@gmail.com"
 		}
 	],
 	"topbarCtaButton": {
@@ -33,25 +41,8 @@
 	],
 	"navigation": [
 		{
-			"group": "Get Started",
-			"pages": [
-				"introduction",
-				"quickstart",
-				"development",
-				"fastapi",
-				"strawberry"
-			]
-		},
-		{
-			"group": "Essentials",
-			"pages": [
-				"essentials/markdown",
-				"essentials/code",
-				"essentials/images",
-				"essentials/settings",
-				"essentials/navigation",
-				"essentials/reusable-snippets"
-			]
+			"group": "AlphaVantage + GraphQL",
+			"pages": ["introduction", "quickstart", "fastapi", "strawberry", "schema"]
 		}
 	],
 	"footerSocials": {
