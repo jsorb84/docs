@@ -42,7 +42,14 @@
 	"navigation": [
 		{
 			"group": "AlphaVantage + GraphQL",
-			"pages": ["introduction", "quickstart", "fastapi", "strawberry", "schema"]
+			"pages": [
+				"introduction",
+				"quickstart",
+				"fastapi",
+				"strawberry",
+				"schema",
+				"test"
+			]
 		}
 	],
 	"footerSocials": {
