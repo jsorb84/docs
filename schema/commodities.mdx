@@ -1,0 +1,101 @@
+---
+title: "Global Commodities"
+description: "Information about global commodities such as coal, oil, corn, sugar, etc."
+---
+
+# `getCommodities`
+
+<Tip>
+	All global commodities have the same parameters and the same return type ,
+	this means they can be used interchangably.
+
+    **AlphaVantage Documentation**: [here](https://www.alphavantage.co/documentation/)
+
+</Tip>
+
+### Parameters
+
+<ParamField
+	query="interval"
+	default="monthly"
+>
+	Possible intervals: `monthly`, `quarterly`, and `annual`
+</ParamField>
+
+### Response
+
+<Expandable>
+	<ResponseField
+		name="name"
+		type="String!"
+	/>
+	<ResponseField
+		name="interval"
+		type="monthly | quarterly | annual"
+		default="monthly"
+	/>
+	<ResponseField
+		name="unit"
+		type="String!"
+	/>
+	<ResponseField
+		name="data"
+		type="[CommodotiesDataInterface]!"
+	>
+		<Expandable>
+			<ResponseField
+				name="date"
+				type="String!"
+			/>
+			<ResponseField
+				name="value"
+				type="String!"
+			/>
+		</Expandable>
+	</ResponseField>
+</Expandable>
+
+## Commodities Available
+
+<CardGroup columns={2}>
+	<Card
+		title="Crude Oil"
+		icon="oil-well"
+		iconType="duotone"
+		color="gray"
+	>
+		Crude oil using either the `crudeOilWti` index or the `crudeOilBrent` index
+	</Card>
+	<Card
+		title="Natural Gas"
+		icon="gas-pump"
+		iconType="duotone"
+		color="teal"
+	>
+		Natural gas using the `naturalGas` index
+	</Card>
+	<Card
+		title="Natural Ore"
+		icon="gem"
+		iconType="duotone"
+		color="aqua"
+	>
+		Natural ores and metals: `copper` and `aluminum`
+	</Card>
+	<Card
+		title="Grains"
+		icon="wheat-awn"
+		iconType="duotone"
+		color="sandybrown"
+	>
+		Grain supply: `wheat` & `corn`
+	</Card>
+	<Card
+		title="Other Goods"
+		icon="info"
+		iconType="duotone"
+		color="white"
+	>
+		Other commodities include: `coffee`, `sugar` and `allCommodities`
+	</Card>
+</CardGroup>

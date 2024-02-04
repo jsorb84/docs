@@ -1,0 +1,61 @@
+---
+title: "Example - Crypto Data"
+description: "An example of grabbing cryptocurrency information from the endpoint"
+---
+
+# Set the API Key Header
+
+<Info>
+	A demo call may be made to the `IBM` ticker symbol using the `demo` API key
+</Info>
+
+<Tip>
+Make sure you set your API key in the `ALPHAVANTAGE_API_KEY` header
+```json
+{"ALPHAVANTAGE_API_KEY": "demo"}
+```
+</Tip>
+
+<CodeGroup>
+	```graphql GraphQL Query 
+    query {
+        getCrypto {
+            intraday(symbol:"ETH", interval:"15min") {
+                metadata {
+                    information
+                }
+                series {
+                    open
+                    volume
+                    low
+                }
+            }
+        }
+    }
+
+    ```
+
+    ```json GraphQL Response Graph
+    {
+        "data": {
+            "getCrypto": {
+                "intraday": {
+                    "metadata": {
+                        "information": "Crypto Intraday (15min) Time Series"
+                    },
+                    "series": [
+                        {
+                            "open": 2277.28,
+                            "volume": 1995,
+                            "low": 2277.2
+                        },
+                        ...
+                    ]
+                }
+            }
+        }
+    }
+
+    ```
+
+</CodeGroup>

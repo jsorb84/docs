@@ -1,0 +1,53 @@
+---
+title: "Example - Balance Sheet"
+description: "An example of grabbing fundemental information from the endpoint"
+---
+
+# Set the API Key Header
+
+<Info>
+	A demo call may be made to the `IBM` ticker symbol using the `demo` API key
+</Info>
+
+<Tip>
+Make sure you set your API key in the `ALPHAVANTAGE_API_KEY` header
+```json
+{"ALPHAVANTAGE_API_KEY": "demo"}
+```
+</Tip>
+
+<CodeGroup>
+	```graphql GraphQL Query 
+    query {
+        getFundementalData {
+            getBalanceSheetAnnual(symbol:"IBM") {
+                investments
+                currentDebt
+                currentNetReceivables
+                totalCurrentAssets
+            }
+        }
+    }
+
+    ```
+
+    ```json GraphQL Response Graph
+    {
+        "data": {
+            "getFundementalData": {
+                "getBalanceSheetAnnual": [
+                    {
+                        "investments": "None",
+                        "currentDebt": "9511000000",
+                        "currentNetReceivables": "14209000000",
+                        "totalCurrentAssets": "29118000000"
+                    },
+                    ...
+                ]
+            }
+        }
+    }
+
+    ```
+
+</CodeGroup>

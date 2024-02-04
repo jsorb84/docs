@@ -35,6 +35,14 @@
 			"pages": ["introduction", "quickstart", "fastapi", "strawberry"]
 		},
 		{
+			"group": "Code Examples",
+			"pages": [
+				"examples/timeseries",
+				"examples/fundementaldata",
+				"examples/crypto"
+			]
+		},
+		{
 			"group": "GraphQL Endpoints",
 			"iconType": "duotone",
 
@@ -43,7 +51,8 @@
 				"schema/main",
 				"schema/fundementaldata",
 				"schema/timeseries",
-				"schema/cryptocurrency"
+				"schema/cryptocurrency",
+				"schema/commodities"
 			]
 		}
 	],

@@ -1,0 +1,53 @@
+---
+title: "Example - Time Series Information"
+description: "An example of grabbing time series information from the endpoint"
+---
+
+# Set the API Key Header
+
+<Info>
+	A demo call may be made to the `IBM` ticker symbol using the `demo` API key
+</Info>
+
+<Tip>
+Make sure you set your API key in the `ALPHAVANTAGE_API_KEY` header
+```json
+{"ALPHAVANTAGE_API_KEY": "demo"}
+```
+</Tip>
+
+<CodeGroup>
+	```graphql GraphQL Query 
+    query {
+        getTimeSeries {
+            weekly(symbol: "AAPL") {
+                open
+                low
+                close
+                volume
+            }
+        }
+    }
+
+    ```
+
+    ```json GraphQL Response Graph
+    {
+        "data": {
+            "getTimeSeries": {
+                "weekly": [
+                    {
+                        "open": 192.01,
+                        "low": 179.25,
+                        "close": 185.85,
+                        "volume": 325909883
+                    },
+                    ...
+                ]
+            }
+        }
+    }
+
+    ```
+
+</CodeGroup>

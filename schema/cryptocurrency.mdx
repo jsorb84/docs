@@ -5,6 +5,111 @@ description: "Cryptocurrency data for conversions and intraday prices"
 
 # `getCrypto`
 
+## `monthly` `weekly` & `daily`
+
+<Tip>
+	`MONTHLY` , `WEEKLY` & `DAILY` all have the same parameters and the same
+	response fields.
+</Tip>
+<Info>
+	This API returns intraday time series (timestamp, open, high, low, close,
+	volume) of the cryptocurrency specified, updated realtime. **Alpha Vantage
+	Function**: `DIGITAL_CURRENCY_WEEKLY`
+	[¶](https://www.alphavantage.co/documentation/#currency-monthly)
+</Info>
+### Parameters
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The cryptocurrency symbol. Example: `BTC` for Bitcoin.
+</ParamField>
+<ParamField
+	query="market"
+	type="String!"
+	default="CNY"
+>
+	The market to compare the currency type against. Defaults to `CNY`
+</ParamField>
+
+### Response
+
+    <ResponseField
+    	name="Fields"
+    	type="DigitalCurrencyInterface!"
+    >
+
+<Expandable>
+		<ResponseField
+			name="metadata"
+			type="DigitalCurrencyMetadata!"
+		>
+			<Expandable>
+				<ResponseField
+					name="information"
+					type="String!"
+				/>
+				<ResponseField
+					name="digitalCurrencyCode"
+					type="String!"
+				/>
+				<ResponseField
+					name="digitalCurrencyName"
+					type="String!"
+				/>
+				<ResponseField
+					name="marketCode"
+					type="String!"
+				/>
+				<ResponseField
+					name="marketName"
+					type="String!"
+				/>
+				<ResponseField
+					name="lastUpdated"
+					type="String!"
+				/>
+				<ResponseField
+					name="timeZone"
+					type="String!"
+				/>
+			</Expandable>
+		</ResponseField>
+		<ResponseField
+			name="series"
+			type="DigitalCurrencySeries!"
+		>
+			<Expandable>
+				<ResponseField
+					name="open(Market/Usd)"
+					type="Float!"
+				/>
+				<ResponseField
+					name="high(Market/Usd)"
+					type="Float!"
+				/>
+				<ResponseField
+					name="low(Market/Usd)"
+					type="Float!"
+				/>
+				<ResponseField
+					name="close(Market/Usd)"
+					type="Float!"
+				/>
+				<ResponseField
+					name="volume(Market/Usd)"
+					type="Float!"
+				/>
+				<ResponseField
+					name="marketCapUsd"
+					type="Float!"
+				/>
+			</Expandable>
+		</ResponseField>
+</Expandable>
+	</ResponseField>
+
 ## `intraday`
 
 <Info>
@@ -20,13 +125,6 @@ description: "Cryptocurrency data for conversions and intraday prices"
 	required
 >
 	The cryptocurrency symbol. Example: `BTC` for Bitcoin.
-</ParamField>
-<ParamField
-	query="market"
-	type="String!"
-	default="USD"
->
-	The market to return data for. Example: `USD` for US Dollars.
 </ParamField>
 <ParamField
 	query="interval"
