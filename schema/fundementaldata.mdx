@@ -1,0 +1,711 @@
+---
+title: "Fundemental Data"
+description: "Get fundemental data about a ticker symbol."
+---
+
+# `getFundementalData`
+
+## `globalQuote`
+
+<Info>
+	Get the latest price and volume information for a security. <br />
+	**Alpha Vantage Function**: `GLOBAL_QUOTE` [¶](https://www.alphavantage.co/documentation/#global-quote)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+### Response
+
+<Expandable>
+	<ResponseField
+		name="change"
+		type="String!"
+	/>
+	<ResponseField
+		name="changePercent"
+		type="String!"
+	/>
+	<ResponseField
+		name="high"
+		type="String!"
+	/>
+	<ResponseField
+		name="latestTradingDay"
+		type="String!"
+	/>
+	<ResponseField
+		name="low"
+		type="String!"
+	/>
+	<ResponseField
+		name="open"
+		type="String!"
+	/>
+	<ResponseField
+		name="previousClose"
+		type="String!"
+	/>
+	<ResponseField
+		name="price"
+		type="String!"
+	/>
+	<ResponseField
+		name="symbol"
+		type="String!"
+	/>
+	<ResponseField
+		name="volume"
+		type="String!"
+	/>
+</Expandable>
+
+## `getCompanyOverview`
+
+<Info>
+	Get the company overview for a company. <br />
+	**Alpha Vantage Function**: `OVERVIEW` [¶](https://www.alphavantage.co/documentation/#overview)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the company
+</ParamField>
+
+### Response
+
+<Expandable>
+	<ResponseField
+		name="address"
+		type="String!"
+	/>
+	<ResponseField
+		name="analystTargetPrice"
+		type="String!"
+	/>
+	<ResponseField
+		name="assetType"
+		type="String!"
+	/>
+	<ResponseField
+		name="beta"
+		type="String!"
+	/>
+	<ResponseField
+		name="bookValue"
+		type="String!"
+	/>
+	<ResponseField
+		name="cik"
+		type="String!"
+	/>
+	<ResponseField
+		name="country"
+		type="String!"
+	/>
+	<ResponseField
+		name="currency"
+		type="String!"
+	/>
+	<ResponseField
+		name="dayMovingAverage200"
+		type="String!"
+	/>
+	<ResponseField
+		name="dayMovingAverage50"
+		type="String!"
+	/>
+	<ResponseField
+		name="description"
+		type="String!"
+	/>
+	<ResponseField
+		name="dilutedEpsTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="dividendDate"
+		type="String!"
+	/>
+	<ResponseField
+		name="dividendPerShare"
+		type="String!"
+	/>
+	<ResponseField
+		name="dividendYield"
+		type="String!"
+	/>
+	<ResponseField
+		name="ebitda"
+		type="String!"
+	/>
+	<ResponseField
+		name="eps"
+		type="String!"
+	/>
+	<ResponseField
+		name="evToEbitda"
+		type="String!"
+	/>
+	<ResponseField
+		name="evToRevenue"
+		type="String!"
+	/>
+	<ResponseField
+		name="exDividendDate"
+		type="String!"
+	/>
+	<ResponseField
+		name="exchange"
+		type="String!"
+	/>
+	<ResponseField
+		name="fiscalYearEnd"
+		type="String!"
+	/>
+	<ResponseField
+		name="forwardPe"
+		type="String!"
+	/>
+	<ResponseField
+		name="grossProfitTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="industry"
+		type="String!"
+	/>
+	<ResponseField
+		name="latestQuarter"
+		type="String!"
+	/>
+	<ResponseField
+		name="marketCapitalization"
+		type="String!"
+	/>
+	<ResponseField
+		name="name"
+		type="String!"
+	/>
+	<ResponseField
+		name="operatingMarginTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="peRatio"
+		type="String!"
+	/>
+	<ResponseField
+		name="pegRatio"
+		type="String!"
+	/>
+	<ResponseField
+		name="priceToBookRatio"
+		type="String!"
+	/>
+	<ResponseField
+		name="priceToSalesRatioTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="profitMargin"
+		type="String!"
+	/>
+	<ResponseField
+		name="quarterlyEarningsGrowthYoy"
+		type="String!"
+	/>
+	<ResponseField
+		name="quarterlyRevenueGrowthYoy"
+		type="String!"
+	/>
+	<ResponseField
+		name="returnOnAssetsTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="returnOnEquityTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="revenuePerShareTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="revenueTtm"
+		type="String!"
+	/>
+	<ResponseField
+		name="sector"
+		type="String!"
+	/>
+	<ResponseField
+		name="sharesOutstanding"
+		type="String!"
+	/>
+	<ResponseField
+		name="symbol"
+		type="String!"
+	/>
+	<ResponseField
+		name="trailingPe"
+		type="String!"
+	/>
+	<ResponseField
+		name="weekHigh52"
+		type="String!"
+	/>
+	<ResponseField
+		name="weekLow52"
+		type="String!"
+	/>
+</Expandable>
+
+## `getIncomeStatementAnnual` & `getIncomeStatementQuarterly`
+
+<Info>
+	Get the annual income statement for a company. <br />
+	**Alpha Vantage Function**: `INCOME_STATEMENT` [¶](https://www.alphavantage.co/documentation/#income-statement)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the company
+</ParamField>
+
+### Response
+
+<Expandable>
+	<ResponseField
+		name="comprehensiveIncomeNetOfTax"
+		type="String!"
+	/>
+	<ResponseField
+		name="costOfGoodsServicesSold"
+		type="String!"
+	/>
+	<ResponseField
+		name="costOfRevenue"
+		type="String!"
+	/>
+	<ResponseField
+		name="depreciation"
+		type="String!"
+	/>
+	<ResponseField
+		name="depreciationAndAmortization"
+		type="String!"
+	/>
+	<ResponseField
+		name="ebit"
+		type="String!"
+	/>
+	<ResponseField
+		name="ebitda"
+		type="String!"
+	/>
+	<ResponseField
+		name="fiscalDateEnding"
+		type="String!"
+	/>
+	<ResponseField
+		name="grossProfit"
+		type="String!"
+	/>
+	<ResponseField
+		name="incomeBeforeTax"
+		type="String!"
+	/>
+	<ResponseField
+		name="incomeTaxExpense"
+		type="String!"
+	/>
+	<ResponseField
+		name="interestAndDebtExpense"
+		type="String!"
+	/>
+	<ResponseField
+		name="interestExpense"
+		type="String!"
+	/>
+	<ResponseField
+		name="interestIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="investmentIncomeNet"
+		type="String!"
+	/>
+	<ResponseField
+		name="netIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="netIncomeFromContinuingOperations"
+		type="String!"
+	/>
+	<ResponseField
+		name="netInterestIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="nonInterestIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="operatingExpenses"
+		type="String!"
+	/>
+	<ResponseField
+		name="operatingIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="otherNonOperatingIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="reportedCurrency"
+		type="String!"
+	/>
+	<ResponseField
+		name="researchAndDevelopment"
+		type="String!"
+	/>
+	<ResponseField
+		name="sellingGeneralAndAdministrative"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalRevenue"
+		type="String!"
+	/>
+</Expandable>
+## `getCashFlowAnnual` & `getCashFlowQuarterly`
+
+<Info>
+	Get the annual cash flow for a company. <br />
+	**Alpha Vantage Function**: `CASH_FLOW` [¶](https://www.alphavantage.co/documentation/#cash-flow)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the company
+</ParamField>
+
+### Response
+
+<Expandable>
+	<ResponseField
+		name="capitalExpenditures"
+		type="String!"
+	/>
+	<ResponseField
+		name="cashflowFromFinancing"
+		type="String!"
+	/>
+	<ResponseField
+		name="cashflowFromInvestment"
+		type="String!"
+	/>
+	<ResponseField
+		name="changeInCashAndCashEquivalents"
+		type="String!"
+	/>
+	<ResponseField
+		name="changeInExchangeRate"
+		type="String!"
+	/>
+	<ResponseField
+		name="changeInInventory"
+		type="String!"
+	/>
+	<ResponseField
+		name="changeInOperatingAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="changeInOperatingLiabilities"
+		type="String!"
+	/>
+	<ResponseField
+		name="changeInReceivables"
+		type="String!"
+	/>
+	<ResponseField
+		name="depreciationDepletionAndAmortization"
+		type="String!"
+	/>
+	<ResponseField
+		name="dividendPayout"
+		type="String!"
+	/>
+	<ResponseField
+		name="dividendPayoutCommonStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="dividendPayoutPreferredStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="fiscalDateEnding"
+		type="String!"
+	/>
+	<ResponseField
+		name="netIncome"
+		type="String!"
+	/>
+	<ResponseField
+		name="operatingCashFlow"
+		type="String!"
+	/>
+	<ResponseField
+		name="paymentsForOperatingActivities"
+		type="String!"
+	/>
+	<ResponseField
+		name="paymentsForRepurchaseOfCommonStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="paymentsForRepurchaseOfEquity"
+		type="String!"
+	/>
+	<ResponseField
+		name="paymentsForRepurchaseOfPreferredStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromIssuanceOfCommonStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromIssuanceOfLongTermDebtAndCapitalSecuritiesNet"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromIssuanceOfPreferredStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromOperatingActivities"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromRepaymentsOfShortTermDebt"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromRepurchaseOfEquity"
+		type="String!"
+	/>
+	<ResponseField
+		name="proceedsFromSaleOfTreasuryStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="profitLoss"
+		type="String!"
+	/>
+	<ResponseField
+		name="reportedCurrency"
+		type="String!"
+	/>
+</Expandable>
+
+## `getBalanceSheetAnnual` & `getBalanceSheetQuarterly`
+
+<Info>
+	Get the annual balance sheet for a company. <br />
+	**Alpha Vantage Function**: `BALANCE_SHEET` [¶](https://www.alphavantage.co/documentation/#balance-sheet)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the company
+</ParamField>
+
+### Response
+
+<Expandable>
+	<ResponseField
+		name="accumulatedDepreciationAmortizationPpe"
+		type="String!"
+	/>
+	<ResponseField
+		name="capitalLeaseObligations"
+		type="String!"
+	/>
+	<ResponseField
+		name="cashAndCashEquivalentsAtCarryingValue"
+		type="String!"
+	/>
+	<ResponseField
+		name="cashAndShortTermInvestments"
+		type="String!"
+	/>
+	<ResponseField
+		name="commonStock"
+		type="String!"
+	/>
+	<ResponseField
+		name="commonStockSharesOutstanding"
+		type="String!"
+	/>
+	<ResponseField
+		name="currentAccountsPayable"
+		type="String!"
+	/>
+	<ResponseField
+		name="currentDebt"
+		type="String!"
+	/>
+	<ResponseField
+		name="currentLongTermDebt"
+		type="String!"
+	/>
+	<ResponseField
+		name="currentNetReceivables"
+		type="String!"
+	/>
+	<ResponseField
+		name="deferredRevenue"
+		type="String!"
+	/>
+	<ResponseField
+		name="fiscalDateEnding"
+		type="String!"
+	/>
+	<ResponseField
+		name="goodwill"
+		type="String!"
+	/>
+	<ResponseField
+		name="intangibleAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="intangibleAssetsExcludingGoodwill"
+		type="String!"
+	/>
+	<ResponseField
+		name="inventory"
+		type="String!"
+	/>
+	<ResponseField
+		name="investments"
+		type="String!"
+	/>
+	<ResponseField
+		name="longTermDebt"
+		type="String!"
+	/>
+	<ResponseField
+		name="longTermDebtNoncurrent"
+		type="String!"
+	/>
+	<ResponseField
+		name="longTermInvestments"
+		type="String!"
+	/>
+	<ResponseField
+		name="otherCurrentAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="otherCurrentLiabilities"
+		type="String!"
+	/>
+	<ResponseField
+		name="otherNonCurrentAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="otherNonCurrentLiabilities"
+		type="String!"
+	/>
+	<ResponseField
+		name="propertyPlantEquipment"
+		type="String!"
+	/>
+	<ResponseField
+		name="reportedCurrency"
+		type="String!"
+	/>
+	<ResponseField
+		name="retainedEarnings"
+		type="String!"
+	/>
+	<ResponseField
+		name="shortLongTermDebtTotal"
+		type="String!"
+	/>
+	<ResponseField
+		name="shortTermDebt"
+		type="String!"
+	/>
+	<ResponseField
+		name="shortTermInvestments"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalCurrentAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalCurrentLiabilities"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalLiabilities"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalNonCurrentAssets"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalNonCurrentLiabilities"
+		type="String!"
+	/>
+	<ResponseField
+		name="totalShareholderEquity"
+		type="String!"
+	/>
+	<ResponseField
+		name="treasuryStock"
+		type="String!"
+	/>
+</Expandable>

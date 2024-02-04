@@ -1,0 +1,110 @@
+---
+title: "Cryptocurrency Data"
+description: "Cryptocurrency data for conversions and intraday prices"
+---
+
+# `getCrypto`
+
+## `intraday`
+
+<Info>
+	This API returns intraday time series (timestamp, open, high, low, close,
+	volume) of the cryptocurrency specified, updated realtime. **Alpha Vantage
+	Function**: `CRYPTO_INTRADAY`
+	[¶](https://www.alphavantage.co/documentation/#crypto-intraday)
+</Info>
+### Parameters
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The cryptocurrency symbol. Example: `BTC` for Bitcoin.
+</ParamField>
+<ParamField
+	query="market"
+	type="String!"
+	default="USD"
+>
+	The market to return data for. Example: `USD` for US Dollars.
+</ParamField>
+<ParamField
+	query="interval"
+	type="String!"
+	default="5min"
+>
+	Time interval between two consecutive data points in the time series. Example:
+	`5min` for 5 minutes. Accepted Intervals: `1min`, `5min`, `15min`, `30min`,
+	`60min`
+</ParamField>
+
+### Response
+
+<ResponseField name="Response" type="CurrencyExchangeRateType!">
+  <Expandable title="properties">
+    <ResponseField name="metadata" type="CryptoMetadataType!">
+      <Expandable title="properties">
+        <ResponseField name="digitalCurrencyCode" type="String!" />
+        <ResponseField name="digitalCurrencyName" type="String!" />
+        <ResponseField name="information" type="String!" />
+        <ResponseField name="interval" type="String!" />
+        <ResponseField name="lastRefreshed" type="String!" />
+        <ResponseField name="marketCode" type="String!" />
+        <ResponseField name="marketName" type="String!" />
+        <ResponseField name="outputSize" type="String!" />
+        <ResponseField name="timeZone" type="String!" />
+      </Expandable>
+    </ResponseField>
+    <ResponseField name="series" type="TimeSeriesInterface!">
+      <Expandable>
+        <ResponseField name="open" type="String!" />
+        <ResponseField name="date" type="String!" />
+        <ResponseField name="high" type="String!" />
+        <ResponseField name="low" type="String!" />
+        <ResponseField name="close" type="String!" />
+        <ResponseField name="volume" type="String!" />
+      </Expandable>
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+## `exchangeRate`
+
+<Info>
+	Get crypto exchange rates <br />
+	**Alpha Vantage Function**: `CRYPTO_EXCHANGE_RATE` [¶](https://www.alphavantage.co/documentation/#crypto-exchange)
+</Info>
+### Parameters
+
+<ParamField
+	query="fromCurrency"
+	type="String!"
+	required
+>
+	From currency
+</ParamField>
+<ParamField
+	query="toCurrency"
+	type="String!"
+	required
+>
+	To currency
+</ParamField>
+
+### Response
+
+<ResponseField name="Response" type="CurrencyExchangeRateType!">
+  <Expandable title="properties">
+    <ResponseField name="askPrice" type="String!" />
+    <ResponseField name="bidPrice" type="String!" />
+    <ResponseField name="exchangeRate" type="String!"/>
+    <ResponseField name="fromCurrencyCode" type="String!" />
+    <ResponseField name="fromCurrencyName" type="String!" />
+    <ResponseField name="lastRefreshed" type="String!" />
+    <ResponseField name="timezone" type="String!" />
+    <ResponseField name="toCurrencyCode" type="String!" />
+    <ResponseField name="toCurrencyName" type="String!" />
+
+  </Expandable>
+</ResponseField>

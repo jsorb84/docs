@@ -1,6 +1,6 @@
 {
 	"$schema": "https://mintlify.com/schema.json",
-	"name": "Starter Kit",
+	"name": "AlphaVantage + GraphQL API",
 	"logo": {
 		"dark": "/logo/vantage.svg",
 		"light": "/logo/vantage.svg"
@@ -29,26 +29,21 @@
 			"url": "mailto:sorberconsulting@gmail.com"
 		}
 	],
-	"topbarCtaButton": {
-		"name": "Dashboard",
-		"url": "https://dashboard.mintlify.com"
-	},
-	"tabs": [
-		{
-			"name": "API Reference",
-			"url": "api-reference"
-		}
-	],
 	"navigation": [
 		{
 			"group": "AlphaVantage + GraphQL",
+			"pages": ["introduction", "quickstart", "fastapi", "strawberry"]
+		},
+		{
+			"group": "GraphQL Endpoints",
+			"iconType": "duotone",
+
+			"icon": "database",
 			"pages": [
-				"introduction",
-				"quickstart",
-				"fastapi",
-				"strawberry",
-				"schema",
-				"test"
+				"schema/main",
+				"schema/fundementaldata",
+				"schema/timeseries",
+				"schema/cryptocurrency"
 			]
 		}
 	],

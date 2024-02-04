@@ -1,0 +1,444 @@
+---
+title: "Time Series Data"
+description: "Get primary data for stocks, adjusted information can also be queried"
+---
+
+# `getTimeSeries`
+
+## `weekly`
+
+<Info>
+	This API returns time series (open, high, low, close, volume) of the stock
+	specified. **Alpha Vantage Function**: `TIME_SERIES_WEEKLY`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+
+## `monthly`
+
+<Info>
+	This API returns time series (open, high, low, close, volume) of the stock
+	specified. **Alpha Vantage Function**: `TIME_SERIES_MONTHLY`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+
+## `intraday`
+
+<Info>
+	This API returns time series (open, high, low, close, volume) of the stock
+	specified. **Alpha Vantage Function**: `TIME_SERIES_INTRADAY`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+<ParamField
+	query="outputsize"
+	type="String!"
+	default="compact"
+>
+	The size of the output data. By default, the API returns compact.
+</ParamField>
+
+<ParamField
+	query="interval"
+	type="String!"
+	default="15min"
+>
+	Time interval between two consecutive data points in the time series. Example:
+	`5min` for 5 minutes. Accepted Intervals: `1min`, `5min`, `15min`, `30min`,
+	`60min`
+</ParamField>
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+
+## `daily`
+
+<Info>
+	This API returns time series (open, high, low, close, volume) of the stock
+	specified. **Alpha Vantage Function**: `TIME_SERIES_DAILY`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+<ParamField
+	query="outputsize"
+	type="String!"
+	default="compact"
+>
+	The size of the output data. By default, the API returns compact.
+</ParamField>
+
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+
+# `getTimeSeriesAdjusted`
+
+## `daily`
+
+<Info>
+	This API returns time series (open, high, low, close, volume, adjusted close,
+	and divident amount) of the stock specified. **Alpha Vantage Function**:
+	`TIME_SERIES_DAILY_ADJUSTED`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+<ParamField
+	query="outputsize"
+	type="String!"
+	default="compact"
+>
+	The size of the output data. By default, the API returns compact.
+</ParamField>
+
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesAdjustedInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="adjustedClose"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+		<ResponseField
+			name="dividendAmount"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+	</Expandable>
+</ResponseField>
+
+---
+
+## `weekly`
+
+<Info>
+	This API returns time series (open, high, low, close, volume, adjusted close,
+	and divident amount) of the stock specified. **Alpha Vantage Function**:
+	`TIME_SERIES_WEEKLY_ADJUSTED`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesAdjustedInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="adjustedClose"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+		<ResponseField
+			name="dividendAmount"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+	</Expandable>
+</ResponseField>
+
+---
+
+## `monthly`
+
+<Info>
+	This API returns time series (open, high, low, close, volume, adjusted close,
+	and divident amount) of the stock specified. **Alpha Vantage Function**:
+	`TIME_SERIES_MONTHLY_ADJUSTED`
+	[¶](https://www.alphavantage.co/documentation/#time-series)
+</Info>
+
+### Parameters
+
+<ParamField
+	query="symbol"
+	type="String!"
+	required
+>
+	The ticker symbol of the security
+</ParamField>
+
+<ParamField
+	query="outputsize"
+	type="String!"
+	default="compact"
+>
+	The size of the output data. By default, the API returns compact.
+</ParamField>
+
+### Response
+
+<ResponseField
+	name="Fields"
+	type="TimeSeriesAdjustedInterface!"
+>
+	<Expandable>
+		<ResponseField
+			name="adjustedClose"
+			type="Float!"
+		/>
+		<ResponseField
+			name="close"
+			type="Float!"
+		/>
+		<ResponseField
+			name="date"
+			type="String!"
+		/>
+		<ResponseField
+			name="dividendAmount"
+			type="Float!"
+		/>
+		<ResponseField
+			name="high"
+			type="Float!"
+		/>
+		<ResponseField
+			name="low"
+			type="Float!"
+		/>
+		<ResponseField
+			name="open"
+			type="Float!"
+		/>
+		<ResponseField
+			name="volume"
+			type="Float!"
+		/>
+	</Expandable>
+</ResponseField>
