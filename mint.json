@@ -24,6 +24,10 @@
 		}
 	},
 	"topbarLinks": [
+        {
+            "name": "Apollo GraphQL Studio",
+            "url": "https://studio.apollographql.com/public/AlphaVantageGQL/variant/current/home"
+        },
 		{
 			"name": "Support",
 			"url": "mailto:sorberconsulting@gmail.com"
