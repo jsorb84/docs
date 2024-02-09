@@ -26,8 +26,35 @@ description: "Get primary data for stocks, adjusted information can also be quer
 ### Response
 
 <ResponseField
-	name="Fields"
-	type="TimeSeriesInterface!"
+	name="metadata"
+	type="TimeSeriesMetadata!"
+>
+	<Expandable>
+		<ResponseField
+			name="information"
+			type="String!"
+		/>
+		<ResponseField
+			name="symbol"
+			type="String!"
+		/>
+		<ResponseField
+			name="lastRefreshed"
+			type="String!"
+		/>
+		<ResponseField
+			name="outputSize"
+			type="String!"
+		/>
+		<ResponseField
+			name="timeZone"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+<ResponseField
+	name="data"
+	type="TimeSeriesData!"
 >
 	<Expandable>
 		<ResponseField
@@ -78,8 +105,35 @@ description: "Get primary data for stocks, adjusted information can also be quer
 ### Response
 
 <ResponseField
-	name="Fields"
-	type="TimeSeriesInterface!"
+	name="metadata"
+	type="TimeSeriesMetadata!"
+>
+	<Expandable>
+		<ResponseField
+			name="information"
+			type="String!"
+		/>
+		<ResponseField
+			name="symbol"
+			type="String!"
+		/>
+		<ResponseField
+			name="lastRefreshed"
+			type="String!"
+		/>
+		<ResponseField
+			name="outputSize"
+			type="String!"
+		/>
+		<ResponseField
+			name="timeZone"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+<ResponseField
+	name="data"
+	type="TimeSeriesData!"
 >
 	<Expandable>
 		<ResponseField
@@ -147,8 +201,35 @@ description: "Get primary data for stocks, adjusted information can also be quer
 ### Response
 
 <ResponseField
-	name="Fields"
-	type="TimeSeriesInterface!"
+	name="metadata"
+	type="TimeSeriesMetadata!"
+>
+	<Expandable>
+		<ResponseField
+			name="information"
+			type="String!"
+		/>
+		<ResponseField
+			name="symbol"
+			type="String!"
+		/>
+		<ResponseField
+			name="lastRefreshed"
+			type="String!"
+		/>
+		<ResponseField
+			name="outputSize"
+			type="String!"
+		/>
+		<ResponseField
+			name="timeZone"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+<ResponseField
+	name="data"
+	type="TimeSeriesData!"
 >
 	<Expandable>
 		<ResponseField
@@ -207,8 +288,35 @@ description: "Get primary data for stocks, adjusted information can also be quer
 ### Response
 
 <ResponseField
-	name="Fields"
-	type="TimeSeriesInterface!"
+	name="metadata"
+	type="TimeSeriesMetadata!"
+>
+	<Expandable>
+		<ResponseField
+			name="information"
+			type="String!"
+		/>
+		<ResponseField
+			name="symbol"
+			type="String!"
+		/>
+		<ResponseField
+			name="lastRefreshed"
+			type="String!"
+		/>
+		<ResponseField
+			name="outputSize"
+			type="String!"
+		/>
+		<ResponseField
+			name="timeZone"
+			type="String!"
+		/>
+	</Expandable>
+</ResponseField>
+<ResponseField
+	name="data"
+	type="TimeSeriesData!"
 >
 	<Expandable>
 		<ResponseField
@@ -273,40 +381,72 @@ description: "Get primary data for stocks, adjusted information can also be quer
 	name="Fields"
 	type="TimeSeriesAdjustedInterface!"
 >
-	<Expandable>
-		<ResponseField
-			name="adjustedClose"
-			type="Float!"
-		/>
-		<ResponseField
-			name="close"
-			type="Float!"
-		/>
-		<ResponseField
-			name="date"
-			type="String!"
-		/>
-		<ResponseField
-			name="dividendAmount"
-			type="Float!"
-		/>
-		<ResponseField
-			name="high"
-			type="Float!"
-		/>
-		<ResponseField
-			name="low"
-			type="Float!"
-		/>
-		<ResponseField
-			name="open"
-			type="Float!"
-		/>
-		<ResponseField
-			name="volume"
-			type="Float!"
-		/>
-	</Expandable>
+	<ResponseField
+		name="metadata"
+		type="TimeSeriesMetadata!"
+	>
+		<Expandable>
+			<ResponseField
+				name="information"
+				type="String!"
+			/>
+			<ResponseField
+				name="symbol"
+				type="String!"
+			/>
+			<ResponseField
+				name="lastRefreshed"
+				type="String!"
+			/>
+			<ResponseField
+				name="outputSize"
+				type="String!"
+			/>
+			<ResponseField
+				name="timeZone"
+				type="String!"
+			/>
+		</Expandable>
+	</ResponseField>
+	<ResponseField
+		name="data"
+		type="TimeSeriesAdjustedData!"
+	>
+		<Expandable>
+			<ResponseField
+				name="adjustedClose"
+				type="Float!"
+			/>
+			<ResponseField
+				name="close"
+				type="Float!"
+			/>
+			<ResponseField
+				name="date"
+				type="String!"
+			/>
+			<ResponseField
+				name="dividendAmount"
+				type="Float!"
+			/>
+			<ResponseField
+				name="high"
+				type="Float!"
+			/>
+			<ResponseField
+				name="low"
+				type="Float!"
+			/>
+			<ResponseField
+				name="open"
+				type="Float!"
+			/>
+			<ResponseField
+				name="volume"
+				type="Float!"
+			/>
+		</Expandable>
+	</ResponseField>
 </ResponseField>
 
 ---
@@ -336,40 +476,72 @@ description: "Get primary data for stocks, adjusted information can also be quer
 	name="Fields"
 	type="TimeSeriesAdjustedInterface!"
 >
-	<Expandable>
-		<ResponseField
-			name="adjustedClose"
-			type="Float!"
-		/>
-		<ResponseField
-			name="close"
-			type="Float!"
-		/>
-		<ResponseField
-			name="date"
-			type="String!"
-		/>
-		<ResponseField
-			name="dividendAmount"
-			type="Float!"
-		/>
-		<ResponseField
-			name="high"
-			type="Float!"
-		/>
-		<ResponseField
-			name="low"
-			type="Float!"
-		/>
-		<ResponseField
-			name="open"
-			type="Float!"
-		/>
-		<ResponseField
-			name="volume"
-			type="Float!"
-		/>
-	</Expandable>
+	<ResponseField
+		name="metadata"
+		type="TimeSeriesMetadata!"
+	>
+		<Expandable>
+			<ResponseField
+				name="information"
+				type="String!"
+			/>
+			<ResponseField
+				name="symbol"
+				type="String!"
+			/>
+			<ResponseField
+				name="lastRefreshed"
+				type="String!"
+			/>
+			<ResponseField
+				name="outputSize"
+				type="String!"
+			/>
+			<ResponseField
+				name="timeZone"
+				type="String!"
+			/>
+		</Expandable>
+	</ResponseField>
+	<ResponseField
+		name="data"
+		type="TimeSeriesAdjustedData!"
+	>
+		<Expandable>
+			<ResponseField
+				name="adjustedClose"
+				type="Float!"
+			/>
+			<ResponseField
+				name="close"
+				type="Float!"
+			/>
+			<ResponseField
+				name="date"
+				type="String!"
+			/>
+			<ResponseField
+				name="dividendAmount"
+				type="Float!"
+			/>
+			<ResponseField
+				name="high"
+				type="Float!"
+			/>
+			<ResponseField
+				name="low"
+				type="Float!"
+			/>
+			<ResponseField
+				name="open"
+				type="Float!"
+			/>
+			<ResponseField
+				name="volume"
+				type="Float!"
+			/>
+		</Expandable>
+	</ResponseField>
 </ResponseField>
 
 ---
@@ -407,38 +579,70 @@ description: "Get primary data for stocks, adjusted information can also be quer
 	name="Fields"
 	type="TimeSeriesAdjustedInterface!"
 >
-	<Expandable>
-		<ResponseField
-			name="adjustedClose"
-			type="Float!"
-		/>
-		<ResponseField
-			name="close"
-			type="Float!"
-		/>
-		<ResponseField
-			name="date"
-			type="String!"
-		/>
-		<ResponseField
-			name="dividendAmount"
-			type="Float!"
-		/>
-		<ResponseField
-			name="high"
-			type="Float!"
-		/>
-		<ResponseField
-			name="low"
-			type="Float!"
-		/>
-		<ResponseField
-			name="open"
-			type="Float!"
-		/>
-		<ResponseField
-			name="volume"
-			type="Float!"
-		/>
-	</Expandable>
+	<ResponseField
+		name="metadata"
+		type="TimeSeriesMetadata!"
+	>
+		<Expandable>
+			<ResponseField
+				name="information"
+				type="String!"
+			/>
+			<ResponseField
+				name="symbol"
+				type="String!"
+			/>
+			<ResponseField
+				name="lastRefreshed"
+				type="String!"
+			/>
+			<ResponseField
+				name="outputSize"
+				type="String!"
+			/>
+			<ResponseField
+				name="timeZone"
+				type="String!"
+			/>
+		</Expandable>
+	</ResponseField>
+	<ResponseField
+		name="data"
+		type="TimeSeriesAdjustedData!"
+	>
+		<Expandable>
+			<ResponseField
+				name="adjustedClose"
+				type="Float!"
+			/>
+			<ResponseField
+				name="close"
+				type="Float!"
+			/>
+			<ResponseField
+				name="date"
+				type="String!"
+			/>
+			<ResponseField
+				name="dividendAmount"
+				type="Float!"
+			/>
+			<ResponseField
+				name="high"
+				type="Float!"
+			/>
+			<ResponseField
+				name="low"
+				type="Float!"
+			/>
+			<ResponseField
+				name="open"
+				type="Float!"
+			/>
+			<ResponseField
+				name="volume"
+				type="Float!"
+			/>
+		</Expandable>
+	</ResponseField>
 </ResponseField>

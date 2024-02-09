@@ -21,10 +21,12 @@ Make sure you set your API key in the `ALPHAVANTAGE_API_KEY` header
     query {
         getTimeSeries {
             weekly(symbol: "AAPL") {
-                open
-                low
-                close
-                volume
+                data {
+                    open
+                    low
+                    close
+                    volume
+                }
             }
         }
     }
@@ -35,15 +37,18 @@ Make sure you set your API key in the `ALPHAVANTAGE_API_KEY` header
     {
         "data": {
             "getTimeSeries": {
-                "weekly": [
-                    {
-                        "open": 192.01,
-                        "low": 179.25,
-                        "close": 185.85,
-                        "volume": 325909883
-                    },
-                    ...
-                ]
+                "weekly": {
+                    "data": [
+                        {
+                            "open": 192.01,
+                            "low": 179.25,
+                            "close": 185.85,
+                            "volume": 325909883
+                        },
+                        ...
+                    ]
+
+                }
             }
         }
     }
